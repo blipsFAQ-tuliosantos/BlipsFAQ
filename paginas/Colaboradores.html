@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarquia </title>
+    <style>
+        body {
+            background: #FCBA28;
+            color: #000000;
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+    h1 {
+        background: #FCBA28;
+        color:#000000;
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .card-title {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .children {
+        margin-left: 20px;
+        margin-top: 12px;
+        display: none;
+        animation: fade .3s ease-in-out;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .motivo {
+        font-size: 14px;
+        margin-top: 6px;
+        color: #444;
+    }
+</style>
+
+
+</head>
+<body>
+
+<h1>Hierarquia: Instalação/Onboarding</h1>
+
+<div class="container">
+
+
+<!-- DIRETOR -->
+<div class="card" onclick="toggle(this)">
+    <div class="card-title">Diretor de Operações: Fernando Motta</div>
+
+    <div class="children">
+        
+        <!-- GERENTE TÉCNICO -->
+        <div class="card" onclick="toggle(this)">
+            <div class="card-title">Gerente Técnico: Marcelo Ramos</div>
+            <div class="children">
+                <div class="card">
+                    <div class="card-title">BackOffice_Técnico: Kathiúcia</div>
+                    <div class="motivo"><b>Atividades:</b> Faz pagamento dos técnicos e acompanhamento de vínculo de técnico e de peças enviadas de máquinas remanejadas</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- GERENTE LOGÍSTICA -->
+        <div class="card" onclick="toggle(this)">
+            <div class="card-title">Gerente de Logística: Thiago Machado</div>
+            <div class="children">
+                <div class="card">
+                    <div class="card-title">Analistas de Logística: Flávia Oliveira</div>
+                    <div class="motivo"><b>Atividades:</b> Possui contato direto com transportadora e possui informações sobre qual área cada uma atua.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUPRIMENTOS -->
+        <div class="card">
+            <div class="card-title">Supervisora E-Commerce/Suprimentos: Daynn Heinstein Costa</div>
+            <div class="motivo"><b>Atividades:</b> Responsável pela venda de suprimentos</div>
+        </div>
+
+        <!-- CUSTOMER SERVICES -->
+        <div class="card" onclick="toggle(this)">
+            <div class="card-title">Gestora de Customer Service: Mayara Resende</div>
+            <div class="children">
+
+                <!-- SAC -->
+                <div class="card" onclick="toggle(this)">
+                    <div class="card-title">Supervisor SAC: Bruno Moura</div>
+                    <div class="children">
+                        <div class="card">
+                            <div class="card-title">Analistas SAC (5)</div>
+                            <div class="motivo"><b>Camila Souza</b></div>
+                            <div class="motivo"><b>Matheus Silva</b></div>
+                            <div class="motivo"><b>Zarrara Alves</b></div>
+                            <div class="motivo"><b>Waliane Mendes</b></div>
+                            <div class="motivo"><b>Rayane Cristina</b></div>
+                            <div class="motivo"><b>Atividades:</b> Atuam em resolver RA (Reclame Aqui).</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ONGOING -->
+                <div class="card" onclick="toggle(this)">
+                    <div class="card-title">Supervisor Ongoing</div>
+                    <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+
+                    <div class="children">
+                        <div class="card">
+                            <div class="card-title">Analistas Ongoing (7)</div>
+                            <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Analistas de Retenção (4)</div>
+                            <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUPORTE -->
+                <div class="card" onclick="toggle(this)">
+                    <div class="card-title">Supervisor Suporte ao Cliente</div>
+                    <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+
+                    <div class="children">
+                        <div class="card">
+                            <div class="card-title">Analistas de Suporte (12)</div>
+                            <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUPERVISÃO CS -->
+        <div class="card" onclick="toggle(this)">
+            <div class="card-title">Supervisão CS: Mariane Carvalho</div>
+
+            <div class="children">
+
+                <div class="card" onclick="toggle(this)">
+                    <div class="card-title">Supervisora Onboarding Instalações</div>
+                    <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+
+                    <div class="children">
+                        <div class="card">
+                            <div class="card-title">Analistas Onboarding (8)</div>
+                            <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggle(this)">
+                    <div class="card-title">Supervisora Onboarding Estética/Fitness/Food</div>
+                    <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+
+                    <div class="children">
+                        <div class="card">
+                            <div class="card-title">Analistas Onboarding (5)</div>
+                            <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggle(this)">
+                    <div class="card-title">Supervisor Documentação</div>
+
+                    <div class="children">
+                        <div class="card">
+                            <div class="card-title">Analistas Documentação (9)</div>
+                            <div class="motivo"><b>Motivo:</b> [Descreva aqui]</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<script>
+    function toggle(el) {
+        const child = el.querySelector(".children");
+        if (!child) return;
+        child.style.display = child.style.display === "block" ? "none" : "block";
+        event.stopPropagation();
+    }
+</script>
+
+</body>
+</html>
